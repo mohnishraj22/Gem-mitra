@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="hero-section">
+  <h1 class="heading">Welcome to GeM-Mitra!</h1>
+  <div class="paragraph">
+    <div class="para1">
+      <h5>
+        We're dedicated to enhancing your shopping experience. We've diligently
+        compared GeM product prices, ratings, and availability with other top
+        e-commerce sites to ensure you get the best deals. We value your money
+        and aim to offer the most competitive rates.
+      </h5>
+    </div>
+    <div class="para2">
+      <h5>
+        We also prioritize product quality, considering ratings and reviews from
+        other customers. Plus, we display real-time GeM product availability,
+        making your shopping hassle-free.
+      </h5>
+    </div>
+  </div>
+</div>
+<div style="width: 100%;">
+    <div class="container-fluid" style="justify-content: center">
+      <form class="d-flex search-bar" method="get" action="geturl">
+        <input
+          class="search-input"
+          name="url"
+          type="search"
+          placeholder="Paste the URL here"
+          aria-label="Search"
+          style="
+            width: 600px;
+          "
+        />
+        <button
+          class="search-btn"
+          type="submit"
+          style="background-color: transparent; font-weight: 600;"
+        >
+          Search
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            ></path>
+          </svg>
+        </button>
+      </form>
+    </div>
+</div>
+{% endblock body %}

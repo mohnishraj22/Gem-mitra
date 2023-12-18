@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="hero-section">
+    <h1 class="heading">Welcome to our website!</h1>
+    <div class="paragraph">
+      <div class="para1">
+        <h5>
+            We believe in providing you with the best shopping experience possible, which is why we have compared the prices, ratings, and availability of GeM products with other popular e-commerce websites.
+        </h5>
+      </div>
+      <div class="para2">
+        <h5>
+            When it comes to finding the best deals, we know that price is an essential factor. That's why we have meticulously compared the prices of GeM products with other platforms to ensure that you get the most competitive rates available. We understand the value of your hard-earned money and strive to bring you the best value for your purchase.
+        </h5>
+      </div>
+    </div>
+</div>
+<div style="width: 100%;">
+    <div class="container-fluid" style="justify-content: center">
+      <form class="d-flex search-bar" method="get" action="geturl">
+        <input
+          class="search-input"
+          name="url"
+          type="search"
+          placeholder="Paste the URL here"
+          aria-label="Search"
+          style="
+            width: 600px;
+          "
+        />
+        <button
+          class="search-btn"
+          type="submit"
+        >
+          Search
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            ></path>
+          </svg>
+        </button>
+      </form>
+    </div>
+</div>
+
+<div class="products-table">
+    <div class="col-md-12 mx-auto">
+        <table class="table table-bordered align-middle mb-0 bg-white table-style" style="border: 1px groove rgb(5, 5, 5); border-radius: 6rem;" >
+            <tr class="bg-dark">
+                <th>Product Name</th>
+                <th width="500px">
+                   <h5><h6 style="font-weight:800;">GeM Product</h6>{{gem_data.title}}</h4>
+                </th>
+                <th width="500px">
+                    <h5>{{fetch_data.product_title}}</h4>
+                </th>
+                <th width="500px">
+                    <h5>{{fetch_data1.product_title}}</h4>
+                </th>
+            </tr>
+            <tr>
+                <th>Product Image</th>
+                <td>
+                    <img src={{fetch_data1.product_photo}} id="image1" alt="" style="width: 200px;">  
+                </td>
+                <td>
+                    <img src={{fetch_data.product_photo}} id="image1" alt="Nigas in paris" style="width: 200px;">
+                </td>
+                <td>
+                    <img src={{fetch_data1.product_photo}} id="image2" alt="Abel" style="width: 200px;">
+                </td>
+            </tr>
+            <tr>
+                <th>Product Price</th>
+                <td id="price1">{{gem_data.price}}</td>
+                <td id="price2">Rs {{fetch_data.product_price}}</td>
+                <td id="price3">Rs {{fetch_data1.product_price}}</td>
+            </tr>
+            <tr>
+                <th>Product Rating</th>
+                <td id="rating1">{{gem_data.rating}}</td>
+                <td id="rating2">{{fetch_data.product_star_rating}}</td>
+                <td id="rating3">{{fetch_data1.product_star_rating}}</td>
+            </tr>
+            <tr>
+                <th>Product Availability</th>
+                <td id="Availability1">Available</td>
+                <td id="Availability2">Available</td>
+                <td id="Availability3">Available</td>
+            </tr>
+
+            <tr>
+                <th>Product Link</th>
+                <td id="Link1"><a href={{gem_data.url}}>Get here</a></td>
+                <td id="Link2"><a href={{fetch_data.product_url}}>Get here</a></td>
+                <td id="Link3"><a href={{fetch_data1.product_url}}>Get here</a></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+{% endblock body %}

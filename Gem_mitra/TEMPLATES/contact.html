@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block body %}
+<body >
+  <section id="form-section" style="width: 80vh; margin-left: 30rem; padding: 3rem;">
+    <h3 style="font-weight: 700; font-size: 1.7rem; margin-bottom: 2rem;">Your Feedback Is Important For Us</h1>
+    <form class="form-content-section">
+        <div class="form-group">
+            <label for="exampleInputText" style="margin-bottom: .3rem;">Name</label>
+            <input type="text" class="form-control" 
+            id="exampleInputText" placeholder="Enter Your Name" style="margin-bottom: 1rem;">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1" style="margin-bottom: .3rem;">Email address</label>
+            <input type="email" class="form-control" 
+                id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter your email" style="margin-bottom: 1rem;">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputText" style="margin-bottom: .3rem;">Contact Number <small class="text-body-secondary">(optional)</small></label>
+            <input type="text" class="form-control" 
+                id="exampleInputText" style="margin-bottom: 1rem;">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1" style="margin-bottom: .3rem;">Feedback</label>
+            <textarea class="form-control" 
+                id="exampleFormControlTextarea1" rows="3" placeholder="Please write your feedback here" style="margin-bottom: 1rem;"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary submit">Submit</button>
+    </form>
+    </section>
+  </body>
+  {% endblock body %}
