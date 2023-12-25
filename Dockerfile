@@ -14,4 +14,4 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-ENTRYPOINT ["gunicorn","Gem_mitra.wsgi"]
+ENTRYPOINT ["gunicorn -t 600","Gem_mitra.wsgi"]
