@@ -14,4 +14,6 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-ENTRYPOINT ["gunicorn -t 600","Gem_mitra.wsgi"]
+CMD ["gunicorn","--workers", "3", "--timeout", "1000", "--bind", "0.0.0.0:8000", "wsgi:app"]
+
+ENTRYPOINT ["gunicorn","Gem_mitra.wsgi"]
