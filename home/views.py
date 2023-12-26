@@ -65,7 +65,7 @@ def geturl(request):
         querystring = {"query":name,"page":"1","country":"IN","category_id":"aps"}
 
         headers = {
-            "X-RapidAPI-Key": "f39e332248msh4b2bab8450682cfp1b705cjsne97a09c6b7a7",
+            "X-RapidAPI-Key": "521ecd2aa4msh5ce4283a2e5924cp1c2b5cjsnf5721abb572c",
             "X-RapidAPI-Host": "real-time-amazon-data.p.rapidapi.com"
         }
 
